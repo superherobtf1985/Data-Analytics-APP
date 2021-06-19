@@ -1,0 +1,7 @@
+*.csv
+*.png
+/.config
+.env
+.pyc
+__pycache__/
+dump.rdb

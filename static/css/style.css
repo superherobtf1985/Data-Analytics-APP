@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+.container {
+  margin: 0 auto;
+}
+#downloadBtn[disabled] {
+  background: #ccc;
+  pointer-events: none;
+}
+p {
+  color: red;
+  font-size: 20px;
+}

@@ -1,0 +1,24 @@
+{% extends 'application.html' %}
+{% block body %}
+  <div class="border p-4 mt-5">
+    <h2>利用方法</h2> 
+    <ol class="ml-5 mt-3">
+      <li>[ファイルを選択]からCSVテストデータをアップロードします</li>
+      <li>[予測データ作成]をクリックすると、処理が始まります</li>
+      <li>予測データ作成が終了すると、[ダウンロード]ボタンの色が変わります</li>
+      <li>[ダウンロード]がアクティブになったら、クリックすると予測データがダウンロードされます</li>
+    </ol>
+    <h5>※適切なファイルを選択しない場合、処理が行えません</h5>
+  </div>
+  <form id="upload">
+    <p id="loading" class="mt-3"></p>
+    <div class="form-group mt-4">
+      <input type="file" name="file" accept=".csv">
+      <input type="button" value="予測データ作成" onClick="upload()" class="btn btn-primary btn-lg">
+    </div>
+  </form>
+
+  <button onClick="download()" id="downloadBtn" class="btn btn-primary btn-lg btn-block mt-5" disabled>ダウンロード</button>
+
+  <script src="static/js/function.js"></script>
+{% endblock body %}
